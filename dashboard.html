@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="styles.css" rel="stylesheet">
+  <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>LOSTHUB Dashboard</title>
+  <!-- Include Poppins font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <!--top nav-->
+  <div class="top-nav bg-dark">
+    <ul class="container top-links">
+      <a href="login.html">Logout</a>
+      <a href="#" id="editProfileButton" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</a>
+    </ul>
+  </div>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-sm navbar-light ">
+    <div class="container">
+      <a href="index.html" title="LostHub">
+        <h1 class="navbar-brand logo"><img src="LOSTHUB.png" style="max-width: 200px;"></h1>
+      </a>
+      </img>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="p-1 m-1"><a href="lost.html">SEARCH LOST ITEM</a></li>
+          <li class="p-1 m-1"><a href="#report">REPORT LOST ITEM</a>
+          </li>
+          <li class="p-1 m-1"><a href="lost.html">VIEW ITEMS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Your navigation bar goes here -->
+
+  <!-- Main Content -->
+  <div class="container py-5">
+    <!-- Profile Section -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <!-- Placeholder for User Profile Information -->
+        <h4 class="card-title">User Profile</h4>
+        <div id="userProfile">
+          <!-- Placeholder for User Name and Profile Picture -->
+
+          <p class="strong">Name: <span id="userName"></span></p>
+          <p>Email: <span id="userEmail"></span></p>
+
+          <img src="" alt="Profile Picture" id="userProfilePicture">
+        </div>
+      </div>
+    </div>
+
+    <!-- Found Items Section -->
+    <div class="card" id="report">
+      <div class="card-body">
+        <!-- Placeholder for Found Items Form -->
+        <h4 class="card-title">Upload Found Item</h4>
+        <form id="foundItemForm">
+          <div class="mb-3">
+            <label for="itemName" class="form-label">Item Name</label>
+            <input type="text" class="form-control" id="itemName" placeholder="Enter item name" required>
+          </div>
+          <div class="mb-3">
+            <label for="itemDescription" class="form-label">Item Description</label>
+            <textarea class="form-control" id="itemDescription" rows="4" placeholder="Enter item description"
+              required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="contact" class="form-label">Email</label>
+            <input type="email" class="form-control" id="contactInfo" required>
+          </div>
+          <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="date" required>
+          </div>
+          <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="file" class="form-control" id="image" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="reportItem"> <span id="spinner"
+              class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Edit Profile Modal -->
+  <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="updateProfileForm">
+            <div class="mb-3">
+              <label for="newName" class="form-label">New Name</label>
+              <input type="text" class="form-control" id="newName" placeholder="Enter new name">
+            </div>
+
+            <div class="mb-3">
+              <label for="newProfilePicture" class="form-label" aria-placeholder="Enter An Image Url">New Profile
+                Picture</label>
+              <input type="file" class="form-control" id="newProfilePicture" accept="image/*" capture="camera" ">
+            </div>
+
+            <button type=" submit" class="btn btn-primary" id="save">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="alertContainer" class="position-fixed top-0 start-50 translate-middle-x p-3">
+    <!-- The success/error messages will be displayed here -->
+  </div>
+
+  <footer class="bg-dark text-light py-3">
+    <div class="container text-center">
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item"><a href="index.html">Home</a></li>
+        <li class="list-inline-item"><a href="login.html">Report</a></li>
+
+        <li class="list-inline-item "><a href="lost.html">Search</a></li>
+        <li class="list-inline-item "><a href="about-us.html">About Us</a></li>
+      </ul>
+      <p class="m-0">&copy; 2023 LostHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Include the Firebase SDK using script tags -->
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+  <script src="dashboard.js" defer type="module"></script>
+</body>
+
+</html>

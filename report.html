@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>LOSTHUB</title>
+  <link href="styles.css" rel="stylesheet">
+  <!-- Include Poppins font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="main.js" type="module" defer></script>
+</head>
+
+<body>
+  <!--top nav-->
+  <div class="top-nav bg-dark">
+    <ul class="container top-links">
+      <a href="submit.html">Login</a>
+      <a href="signup.html">Create Account</a>
+    </ul>
+  </div>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-sm navbar-light ">
+    <div class="container">
+      <h1 class="navbar-brand logo"><img src="LOSTHUB.png" style="max-width: 200px;"></h1>
+      </img>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="p-1 m-1"><a href="#search">SEARCH LOST ITEM</a></li>
+          <li class="p-1 m-1"><a href="#report">REPORT LOST ITEM</a>
+          </li>
+          <li class="p-1 m-1"><a href="#search">VIEW ITEMS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!--form and hero-->
+  <!--home banner-->
+  <div class="home-banner">
+    <div class="form container py-5">
+      <div class="card shadow-5 rounded-0">
+        <div class="card-body p-6 " id="report">
+          <h4 class="card-title">Report Lost Items</h4>
+          <form>
+            <div class="mb-10">
+              <label for="itemName" class="form-label">Item Name</label>
+              <input type="text" class="form-control" id="itemName" placeholder="Enter item name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="itemDescription" class="form-label">Item Description</label>
+              <textarea class="form-control" id="itemDescription" rows="4" placeholder="Enter item description"
+                required></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="date" class="form-label">Date</label>
+              <input type="date" class="form-control" id="date">
+            </div>
+
+            <div class="mb-3">
+              <label for="contactInfo" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contactInfo" placeholder="Enter your email">
+            </div>
+
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input type="file" class="form-control" id="image">
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="reportItem">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--text-->
+  <div class="container py-5">
+    <div class="row">
+      <div class="col">
+        <h5 class="text-center-sm">📱💼 LostHub - Connecting Lost & Found 💼🔍</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <p class="text-center-sm">LostHub is a mobile application designed to help individuals and communities
+          effectively manage lost and found items. The app serves as a centralized platform where users can report lost
+          items they have found or search for items they have lost, increasing the chances of successful reunions. 🤝🔍
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--lost items-->
+  <div class="bg-dark">
+    <div class="text container">
+      <h4 class="text-center white-text py-3 ">Recent Lost Item Reports</h4>
+    </div>
+
+    <div class="database-items container visually-hidden" id="database">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Card 1 -->
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <h4 class="">Step-by-step proccess</h4>
+    <ol>
+      <li>
+        <span class="text-success">Step 1:</span> Gather Information
+        <ul>
+          <li>Item Name</li>
+          <li>Item Description</li>
+          <li>Date when the item was lost</li>
+          <li>Contact Information (email/phone)</li>
+          <li>Optional: Image of the lost item</li>
+        </ul>
+      </li>
+      <li>
+        <span class="text-success">Step 2:</span> Access LostHub
+        <p>Open the LostHub app on your mobile device or visit our website.</p>
+      </li>
+      <li>
+        <span class="text-success">Step 3:</span> Select "Report Lost Item"
+        <p>Click on the "Report Lost Item" button to begin the reporting process.</p>
+      </li>
+      <li>
+        <span class="text-success">Step 4:</span> Enter Item Details
+        <p>Fill in the form with the information you gathered in Step 1.</p>
+      </li>
+      <li>
+        <span class="text-success">Step 5:</span> Upload an Image
+        <p>If available, upload an image of the lost item to enhance the listing.</p>
+      </li>
+      <li>
+        <span class="text-success">Step 6:</span> Submit the Report
+        <p>Review the information and click the "Submit" button to report the lost item.</p>
+      </li>
+    </ol>
+  </div>
+
+
+  <!--
+  <div class=" container py-3 app">
+    <!-- search items section 
+  <div class="container search-items py-3" id="search">
+    <h4>Search Lost Items</h4>
+    <form>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Enter item details" id="search-input">
+      </div>
+      <button type="submit" class="btn btn-primary" id="search-submit">Search</button>
+    </form>
+  </div>
+
+  <!--items in database
+  <div class="database-items container visually-hidden" id="database">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Card 1 -->
+
+  </div>
+
+  </div>
+
+  <!--report lost items
+  <div class="container report-items py-4" id="report">
+    <h4>Report Lost Item</h4>
+
+    <form>
+      <div class="mb-3">
+        <label for="itemName" class="form-label">Item Name</label>
+        <input type="text" class="form-control" id="itemName" placeholder="Enter item name" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="itemDescription" class="form-label">Item Description</label>
+        <textarea class="form-control" id="itemDescription" rows="4" placeholder="Enter item description"
+          required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date">
+      </div>
+
+      <div class="mb-3">
+        <label for="contactInfo" class="form-label">Email</label>
+        <input type="email" class="form-control" id="contactInfo" placeholder="Enter your email">
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" class="form-control" id="image">
+      </div>
+
+      <button type="submit" class="btn btn-primary" id="reportItem">Submit</button>
+    </form>
+  </div>
+
+  </div>
+-->
+
+
+  <!--Footer-->
+  <footer class="bg-dark text-light py-3">
+    <div class="container text-center">
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item"><a href="#">Login</a></li>
+        <li class="list-inline-item "><a href="#">FAQ</a></li>
+        <li class="list-inline-item "><a href="#">About</a></li>
+        <li class="list-inline-item "><a href="#">Search</a></li>
+      </ul>
+      <p class="m-0">&copy; 2023 LostHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Include the Firebase SDK using script tags -->
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+
+</body>
+
+</html>

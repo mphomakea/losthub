@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Include Bootstrap CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+ <!-- Include Font Awesome CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <title>LOSTHUB</title>
+ <link href="styles.css" rel="stylesheet">
+ <!-- Include Poppins font from Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+ <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+ <link rel="icon" type="image/x-icon" href="/favicon.png">
+ <link rel="manifest" href="/site.webmanifest">
+ <script src="main.js" type="module" defer></script>
+</head>
+
+<body>
+ <!--top nav-->
+ <div class="top-nav bg-dark">
+  <ul class="container top-links">
+   <a href="login.html">Login</a>
+   <a href="register.html">Create Account</a>
+  </ul>
+ </div>
+ <!--Navbar-->
+ <nav class="navbar navbar-expand-sm navbar-light ">
+  <div class="container">
+   <h1 class="navbar-brand logo"><img src="LOSTHUB.png" style="max-width: 200px;"></h1>
+   </img>
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+    <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav ms-auto">
+     <li class="p-1 m-1"><a href="lost.html">SEARCH LOST ITEM</a></li>
+     <li class="p-1 m-1"><a href="register.html">REPORT LOST ITEM</a>
+     </li>
+     <li class="p-1 m-1"><a href="register.html">VIEW ITEMS</a></li>
+    </ul>
+   </div>
+  </div>
+ </nav>
+
+ <!--form and hero-->
+ <section class="py-4">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-6">
+     <h3 class="display-6">LostHub - Connecting Lost & Found 🤝🔍</h3>
+     <p>Welcome to LostHub, a mobile application designed to help individuals and communities effectively
+      manage lost and found items. Our mission is to reunite lost items with their rightful owners and make a positive
+      impact on people's lives. We believe that by connecting lost and found items through our platform, we can build a
+      stronger and more caring community.</p>
+     <p>LostHub serves as a centralized platform where users can report lost items they have found or search for items
+      they have lost. With our user-friendly interface and extensive database, we increase the chances of successful
+      reunions, bringing smiles back to those who have lost something dear to them.</p>
+     <p>Join LostHub today and be part of our mission to make a difference. Together, we can create a world where lost
+      items find their way back home, and lost connections are rekindled.</p>
+    </div>
+    <div class="col-md-6">
+     <img src="https://images.pexels.com/photos/4144294/pexels-photo-4144294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="LostHub Logo" class="img-fluid rounded">
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!--lost items-->
+ <div class="container py-4">
+  <h4 class="">Step-by-step proccess</h4>
+  <ol>
+   <li>
+    <span class="text-success">Step 1:</span> Gather Information
+    <ul>
+     <li>Item Name</li>
+     <li>Item Description</li>
+     <li>Date when the item was lost</li>
+     <li>Contact Information (email/phone)</li>
+     <li>Optional: Image of the lost item</li>
+    </ul>
+   </li>
+   <li>
+    <span class="text-success">Step 2:</span> Access LostHub
+    <p>Open the LostHub app on your mobile device or visit our website.</p>
+   </li>
+   <li>
+    <span class="text-success">Step 3:</span> Select "Report Lost Item"
+    <p>Click on the "Report Lost Item" button to begin the reporting process.</p>
+   </li>
+   <li>
+    <span class="text-success">Step 4:</span> Enter Item Details
+    <p>Fill in the form with the information you gathered in Step 1.</p>
+   </li>
+   <li>
+    <span class="text-success">Step 5:</span> Upload an Image
+    <p>If available, upload an image of the lost item to enhance the listing.</p>
+   </li>
+   <li>
+    <span class="text-success">Step 6:</span> Submit the Report
+    <p>Review the information and click the "Submit" button to report the lost item.</p>
+   </li>
+  </ol>
+ </div>
+
+
+
+
+
+ </div>
+
+ </div>
+
+
+
+ <footer class="bg-dark text-light py-3">
+  <div class="container text-center">
+    <ul class="list-inline mb-0">
+      <li class="list-inline-item"><a href="login.html">Report</a></li>
+      
+      <li class="list-inline-item "><a href="lost.html">Search</a></li>
+      <li class="list-inline-item "><a href="about-us.html">About Us</a></li>
+    </ul>
+    <p class="m-0">&copy; 2023 LostHub. All rights reserved.</p>
+  </div>
+</footer>
+
+ </div>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Include the Firebase SDK using script tags -->
+ <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+
+</body>
+
+</html>
