@@ -21,20 +21,17 @@
 </head>
 
 <body>
-  <!-- Navbar -->
   <!--top nav-->
-  <div class="top-nav bg-dark">
+  <div class="top-nav bg-dark d-none">
     <ul class="container top-links">
-      <a href="login.html">Logout</a>
-      <a href="#" id="editProfileButton" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Create Account</a>
     </ul>
   </div>
   <!--Navbar-->
   <nav class="navbar navbar-expand-sm navbar-light ">
     <div class="container">
-      <a href="index.html" title="LostHub">
-        <h1 class="navbar-brand logo"><img src="LOSTHUB.png" style="max-width: 200px;"></h1>
-      </a>
+      <h1 class="navbar-brand logo"><img src="LOSTHUB.png" style="max-width: 200px;"></h1>
       </img>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
@@ -42,7 +39,7 @@
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
           <li class="p-1 m-1"><a href="lost.html">SEARCH LOST ITEM</a></li>
-          <li class="p-1 m-1"><a href="#report">REPORT LOST ITEM</a>
+          <li class="p-1 m-1"><a href="dashboard.html">REPORT LOST ITEM</a>
           </li>
           <li class="p-1 m-1"><a href="lost.html">VIEW ITEMS</a></li>
         </ul>
@@ -55,7 +52,7 @@
   <!-- Main Content -->
   <div class="container py-5">
     <!-- Profile Section -->
-    <div class="card mb-3">
+    <div class="card mb-3 d-none">
       <div class="card-body">
         <!-- Placeholder for User Profile Information -->
         <h4 class="card-title">User Profile</h4>
@@ -142,8 +139,8 @@
     <div class="container text-center">
       <ul class="list-inline mb-0">
         <li class="list-inline-item"><a href="index.html">Home</a></li>
-        <li class="list-inline-item"><a href="login.html">Report</a></li>
-
+        <li class="list-inline-item"><a href="dashboard.html">Report</a></li>
+        
         <li class="list-inline-item "><a href="lost.html">Search</a></li>
         <li class="list-inline-item "><a href="about-us.html">About Us</a></li>
       </ul>
