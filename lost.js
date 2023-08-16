@@ -128,7 +128,7 @@ function createItemCard(item, itemKey) {
   const contactFounder = document.createElement("a");
   contactFounder.classList.add("card-text")
   contactFounder.id="emailFounder"
-  contactFounder.innerText = "Contact Founder";
+  contactFounder.innerText = "Contact Owner";
   contactFounder.href = "mailto:"+item.contactInfo;
   
  
