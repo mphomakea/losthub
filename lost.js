@@ -125,11 +125,11 @@ function createItemCard(item, itemKey) {
   contactInfo.textContent = "Contact Information: " + item.contactInfo;
 
   //create a button
-  const contactFounder = document.createElement("a");
-  contactFounder.classList.add("card-text")
-  contactFounder.id="emailFounder"
-  contactFounder.innerText = "Contact Owner";
-  contactFounder.href = "mailto:"+item.contactInfo;
+  const contactOwner = document.createElement("a");
+  contactOwner.classList.add("card-text")
+  contactOwner.id="emailFounder"
+  contactOwner.innerText = "Contact Owner";
+  contactOwner.href = "mailto:"+item.contactInfo;
   
  
   // Append the elements to their respective parents
@@ -137,7 +137,7 @@ function createItemCard(item, itemKey) {
   cardBody.appendChild(itemDescription);
   cardBody.appendChild(date);
   cardBody.appendChild(contactInfo);
-  cardBody.appendChild(contactFounder)
+  cardBody.appendChild(contactOwner)
   card.appendChild(image);
   card.appendChild(cardBody);
   cardContainer.appendChild(card);
